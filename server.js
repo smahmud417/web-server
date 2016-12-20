@@ -43,7 +43,7 @@ var app = express();
 var PORT = 3000 ;
 var date ;
 
-var middleware = require('middleware.js');
+var middleware = require('./middleware.js');
 
 //app.use(middleware.requireAuthentication);
 // Geeting request name & URL
