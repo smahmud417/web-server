@@ -43,22 +43,11 @@ var app = express();
 var PORT = 3000 ;
 var date ;
 
-var middleware = {
-	requireAuthentication: function(req, res, next){
-		console.log('private route hit!');
-		next();
-	}, 
-	logger: function(req, res, next){
-        date = new Date().toString();
-
-		console.log('Time:' + date + ' Request:' + req.method + ' ' + req.originalUrl);
-		next();
-	}
-};
+var middleware = require('middleware.js');
 
 //app.use(middleware.requireAuthentication);
 // Geeting request name & URL
-app.use(middleware.logger );
+app.use(middleware.logger);
 
 app.get('/about', middleware.requireAuthentication, function(req, res){
 	res.send('About us!');
