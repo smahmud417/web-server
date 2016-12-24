@@ -3,14 +3,23 @@
 <head>
 <style>
 h1 {
-    color: blue;
+    color: #0000ff; # blue
     font-family: verdana;
     font-size: 300%;
+}
+h2 {
+    color: blue;
+    font-family: verdana;
+    font-size: 200%;
 }
 p  {
     color: red;
     font-family: courier;
     font-size: 160%;
+}
+body {
+	background-color:rgba(192,192,192,0.3);
+    # background-color: yellow;
 }
 </style>
 </head>
